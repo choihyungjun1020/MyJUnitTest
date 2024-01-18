@@ -1,5 +1,8 @@
 package myjunit;
 
+import myjunit.assertion.Assert;
+import myjunit.result.TestResult;
+
 public class TestCaseTest extends TestCase {
     public TestCaseTest(String testCaseName) {
         super(testCaseName);
