@@ -14,11 +14,23 @@ public abstract class TestCase {
         this.testCaseName = testCaseName;
     }
 
+    public TestResult run(){
+        TestResult testResult = createTestResult();
+        run(testResult);
+
+        return testResult;
+    }
+
     // Template Method Pattern
-    public void run() {
+    public void run(TestResult testResult) {
+        testResult.startTest();
         before();
         runTestCase();
         after();
+    }
+
+    private TestResult createTestResult() {
+        return new TestResult();
     }
 
     protected void before() {}

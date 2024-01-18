@@ -23,7 +23,9 @@ public class TestCaseTest extends TestCase {
     }
 
     public static void main(String[] args) {
-        new TestCaseTest("runTest").run();
-        new TestCaseTest("runTestMinus").run();
+        TestResult testResult = new TestResult();
+        new TestCaseTest("runTest").run(testResult);
+        new TestCaseTest("runTestMinus").run(testResult);
+        testResult.printCount();
     }
 }
