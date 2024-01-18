@@ -1,2 +1,5 @@
-package myjunit;public class AssertionFailedError {
+package myjunit;
+
+public class AssertionFailedError extends Error {
+    public AssertionFailedError() {}
 }
