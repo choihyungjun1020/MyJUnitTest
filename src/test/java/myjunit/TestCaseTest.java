@@ -7,12 +7,12 @@ public class TestCaseTest extends TestCase {
 
     private static long base;
 
+    @Override
     public void before() {
         base = 10;
     }
 
     public void runTest() {
-        before();
         long sum = 10 + base;
         Assert.assertTrue(sum == 20);
     }

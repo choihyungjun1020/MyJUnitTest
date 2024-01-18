@@ -14,7 +14,16 @@ public abstract class TestCase {
         this.testCaseName = testCaseName;
     }
 
+    // Template Method Pattern
     public void run() {
+        before();
+        runTestCase();
+        after();
+    }
+
+    protected void before() {}
+
+    private void runTestCase() {
         try {
             logger.info("{} execute ", testCaseName);
             Method method = this.getClass().getMethod(testCaseName);
@@ -23,4 +32,6 @@ public abstract class TestCase {
             throw new RuntimeException(e);
         }
     }
+
+    protected void after() {}
 }
