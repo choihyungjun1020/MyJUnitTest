@@ -17,7 +17,7 @@ public class TestCaseTest extends TestCase {
 
     public void runTest() {
         long sum = 10 + base;
-        Assert.assertTrue(sum == 20);
+        Assert.assertTrue(sum == 30);
     }
 
     public void runTestMinus() {
