@@ -6,7 +6,8 @@ import org.slf4j.LoggerFactory;
 public class Assert {
     public static final Logger logger = LoggerFactory.getLogger(Assert.class);
 
-    private Assert() {}
+    private Assert() {
+    }
 
     public static void assertTrue(boolean condition) {
         if (!condition) {

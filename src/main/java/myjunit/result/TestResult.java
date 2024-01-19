@@ -33,7 +33,7 @@ public class TestResult {
     }
 
     public synchronized void addError(TestCase testCase, Exception e) {
-        this.errors.add(new TestError(testCase,e));
+        this.errors.add(new TestError(testCase, e));
     }
 
     public void printCount() {
